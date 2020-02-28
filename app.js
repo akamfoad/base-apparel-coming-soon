@@ -8,6 +8,9 @@ form.addEventListener("submit", e => {
   e.preventDefault();
 });
 
+email.addEventListener("invalid", e => {
+  e.preventDefault();
+});
 email.addEventListener("change", e => {
   //checks if the input has valid content
   if (!email.checkValidity()) {
@@ -24,7 +27,7 @@ const mobileMediaQuery = window.matchMedia("(max-width: 375px)");
 mobileMediaQuery.addListener(e => {
   if (e.matches) {
     aside_img.setAttribute("src", "./images/hero-mobile.jpg");
-  }else{
+  } else {
     aside_img.setAttribute("src", "./images/hero-desktop.jpg");
   }
 });

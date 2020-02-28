@@ -191,12 +191,17 @@ form {
     margin: 2rem 0 5rem 0;
   }
 
+  *::-moz-focus-inner {
+    border: none;
+  }
+
   #email {
     border: 1px solid var(--Desaturated-Red);
     border-radius: 30px;
     font-size: inherit;
     padding: 15px 20px;
     margin-left: 2em;
+    outline: none;
     justify-self: center;
   }
 
@@ -214,9 +219,9 @@ form {
     font-size: 0.8rem;
     font-weight: var(--Normal-weight);
     bottom: -25px;
-    left: 25px;
+    left: 53px;
     display: none;
-  }
+  }♣
 
   #submit {
     position: relative;
