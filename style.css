@@ -19,13 +19,222 @@
 
   /* Gradients */
 
-  /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%) */
-  /* - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+  /* --Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);  */
+  /* --Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%); */
 
   /* Font */
 
   --Font-size: 16px;
 
   --Font-Family: "Josefin Sans";
-  --Light-weight: 300, 400, 600;
+  --Light-weight: 300;
+  --Normal-weight: 400;
+  --Very-weight: 600;
+}
+
+body {
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-size: cover;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe;
+  font-family: var(--Font-Family);
+  font-size: var(--Font-size);
+}
+
+#logo {
+  margin: 4rem 10rem;
+}
+
+main {
+  width: 100%;
+  margin: 4rem 10rem;
+  margin-top: 0;
+}
+
+#we_head {
+  color: var(--Desaturated-Red);
+  font-weight: var(--Light-weight);
+}
+
+#cs_head {
+  width: 250px;
+  word-wrap: normal;
+  font-weight: var(--Very-weight);
+  color: var(--Dark-Grayish-Red);
+}
+
+main h1 {
+  letter-spacing: 15px;
+  font-size: 3.5rem;
+}
+
+#aside_img {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#desc {
+  padding: 3px;
+  margin: 1rem 0;
+  width: 450px;
+  line-height: 1.5rem;
+  color: var(--Desaturated-Red);
+}
+
+form {
+  position: relative;
+  display: flex;
+}
+
+#email {
+  border: 1px solid var(--Desaturated-Red);
+  border-radius: 30px;
+  font-size: inherit;
+  padding: 15px 20px;
+  width: 375px;
+}
+
+#err_icon {
+  position: absolute;
+  display: none;
+  top: 15px;
+  left: 290px;
+}
+
+#error_message {
+  font-family: var(--Font-Family);
+  position: absolute;
+  color: var(--Soft-Red);
+  font-size: 0.8rem;
+  font-weight: var(--Normal-weight);
+  bottom: -25px;
+  left: 25px;
+  display: none;
+}
+
+#submit {
+  position: relative;
+  left: -50px;
+  border: none;
+  width: 80px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0 15px 15px #0003;
+  cursor: pointer;
+}
+#submit:hover {
+  background-image: none;
+  background-color: hsl(0, 84%, 88%);
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: auto;
+    background-position-x: left;
+    background-position-y: center;
+
+    width: 100vw;
+  }
+
+  #logo {
+    margin: 2.5rem;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  #we_head {
+    color: var(--Desaturated-Red);
+    font-weight: var(--Light-weight);
+    width: 100%;
+  }
+
+  #cs_head {
+    width: 100%;
+    word-wrap: break-word;
+    font-weight: var(--Very-weight);
+    color: var(--Dark-Grayish-Red);
+  }
+
+  main h1 {
+    letter-spacing: 15px;
+    font-size: 2rem;
+  }
+
+  #aside_img {
+    height: unset;
+    width: 100%;
+    position: static;
+  }
+
+  #desc {
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    line-height: 1.5rem;
+    color: var(--Desaturated-Red);
+  }
+
+  form {
+    display: flex;
+    margin: 2rem 0 5rem 0;
+  }
+
+  #email {
+    border: 1px solid var(--Desaturated-Red);
+    border-radius: 30px;
+    font-size: inherit;
+    padding: 15px 20px;
+    margin-left: 2em;
+    justify-self: center;
+  }
+
+  #err_icon {
+    position: absolute;
+    display: none;
+    top: 15px;
+    left: 225px;
+  }
+
+  #error_message {
+    font-family: var(--Font-Family);
+    position: absolute;
+    color: var(--Soft-Red);
+    font-size: 0.8rem;
+    font-weight: var(--Normal-weight);
+    bottom: -25px;
+    left: 25px;
+    display: none;
+  }
+
+  #submit {
+    position: relative;
+    left: -50px;
+    border: none;
+    width: 80px;
+    padding: 15px 20px;
+    border-radius: 50px;
+    background-image: linear-gradient(
+      135deg,
+      hsl(0, 80%, 86%),
+      hsl(0, 74%, 74%)
+    );
+    box-shadow: 0 15px 15px #0003;
+    cursor: pointer;
+  }
+  #submit:hover {
+    background-image: none;
+    background-color: hsl(0, 84%, 88%);
+  }
 }
